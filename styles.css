@@ -1,0 +1,294 @@
+/*Author Charles Beatty
+Date: 11/16/2024
+File Name: Styles.css*/
+
+/*CSS Reset*/
+body, header, nav, main, footer, img, h1, h3, ul, aside, figure, figcaption{
+    margin: 0%;
+    padding: 0%;
+    border: 0%
+}
+
+/*Style Rules for Body and Images*/
+body{
+    background-color: rgb(265, 65, 65)
+}
+
+img{
+    max-width: 100%;
+    display:block;
+}
+
+/*Style Rules for Header Content*/
+header{
+    text-align: center;
+    color: black;
+    padding: 4%;
+}
+header h1{
+    font-size: 4em;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 4px;
+    color: black;
+}
+header h3{
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+}
+/*Style Rules for Mobile Viewport*/
+fieldset{
+    margin:2%
+}
+input{
+    margin: 2%;
+}
+textarea{
+    margin: 2%;
+}
+fieldset legend{
+    font-weight: bold;
+    font-size: 2em;
+}
+label{
+    display: block;
+    padding: 2%;
+}
+#submit{
+    margin: 0%;
+    display: block;
+    padding: 2%;
+    background-color: darkred;
+    color: white;
+    font-size: 2em;
+    border-radius: 2em;
+}
+/*Style rules show mobile class and hide tab-desk*/
+.mobile .mobile-tablet{
+    display: block;
+}
+.tab-desk .desktop{
+    display: none;
+}
+/*Style Rules for Header Area*/
+.mobile h1, .mobile h3{
+    padding: 2%;
+    text-align: center;
+}
+.mobile h1{
+    font-family: 'Courier New', Courier, monospace;
+}
+.mobile h3{
+    font-family: 'Courier New', Courier, monospace;
+}
+/*Style Rules for Nav Area*/
+nav{
+    background-color: crimson;
+}
+nav ul{
+    list-style-type: none;
+    text-align: center;
+}
+nav li{
+    display: block;
+    background-color: crimson;
+    padding: 2em;
+    text-decoration: none;
+}
+nav li a{
+    display: block;
+    color: white;
+    padding: 2em;
+    text-decoration: none;
+}
+
+/*Style Rules for Main Area*/
+main{
+    padding: 2%;
+    font-family: 'Courier New', Courier, monospace;
+}
+main p{
+    font-size: 2em;
+}
+main h3{
+    padding:2%
+}
+main ul{
+    list-style-type: square;
+}
+aside{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bolder;
+    text-shadow: 2em, 2em, 2em, 2em;
+}
+figure{
+    border: 4px, solid, rgb(255, 69, 69);
+    max-width: 400px;
+    margin: 2%, auto;
+}
+figcaption{
+    padding:2%;
+    border:4px solid;
+}
+#cars #form h2{
+    text-align: center;
+}
+/*Style Rules for Form Elements*/
+form{
+    width: auto;
+}
+.form-grid{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-columns: auto;
+    grid-gap: 15px;
+}
+.btn{
+    grid-column: 1 / span 2;
+}
+/*Style Rules for Footer Content*/
+footer{
+    text-align: center;
+    font-size: 2em;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    padding: 2%;
+}
+footer a{
+    color: rgb(255, 69, 69);
+    text-decoration: none;
+}
+
+/*Media Query for Tablet Viewport*/
+@media screen and (min-width: 620px), print {
+    
+    /*Tablet viewport: show tab-desk class, hide mobile class*/
+    .tab-desk{
+        display: block;
+    }
+    .mobile, .mobile-tablet{
+        display: none;
+    }
+    /*Tablet Viewport: Style Rule for Nav Area*/
+    nav li{
+        border-top: none;
+        display: inline-block;
+        font-size: 2em;
+    }
+    nav li a{
+        padding: 1em;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: auto, auto ;
+        grid-gap: 8px;
+    }
+    aside{
+        grid-column: 1 / span 2;
+    }
+    /*Style Rule for Form Elements*/
+    form{
+        width: 70%;
+        margin: auto;
+    }
+}
+/*Media Query for Desktop Viewport*/
+@media screen and (min-width: 1000px), print {
+    
+    /*Desktop viewport: Style Rules for Nav Area*/
+    nav li{
+        font-size: 2em;
+        border-radius: 2%;
+        border: 2px red;
+    }
+    nav li a{
+        padding: 1em, 1.5em;
+        display: block;
+    }
+    nav li a:hover{
+        color: red;
+        background-color: white;
+        opacity: 0.5em;
+        text-decoration: solid;
+    }
+
+    /*Desktop viewport: Style Rules for Main Content*/
+    #info ul{
+        margin-left: 5%;
+    }
+    .grid{
+        grid-template-columns: auto, auto, auto;
+        grid-gap: 30px;
+    }
+    aside{
+        grid-column: 1/ span 4  ;
+    }
+    .column{
+        float: left;
+        width: 30%;
+        padding: 5%;
+    }
+    .row::after{
+        content: "";
+        clear: both;
+        display: table;
+    }
+    /*Style Rules for Table*/
+    .table{
+        border: 2px, solid, black;
+        margin: auto;
+    }
+    .caption{
+        font-size: 2em;
+        font-weight: bold;
+        padding: 1%;
+    }
+    th td{
+        border: 1px solid black
+    }
+    th{
+        background-color: black;
+        color: white;
+        font-size: 2em;
+    }
+    table tr/:nth-child(odd){
+        background-color: white;
+    }
+    /*Style Rules for Form elements*/
+    form{
+        width: auto;
+    }
+    .form-grid{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 15px;
+    }
+    .btn{
+        grid-column: 1 / span 2 ;
+    }
+}
+
+
+/* Media Query for Large Desktop Viewport*/
+@media screen and(min-width: 1921), print {
+    main{
+        background-color: white;
+    }
+    .grid{
+        grid-template-columns: auto auto auto auto ;
+    }
+    aside {
+        grid-column: 1 / span 4;
+        font-size: 3em;
+    }
+}
+
+/*Media Print*/
+@Media print{
+    body{
+        background-color: white;
+        color: black;
+    }
+}
